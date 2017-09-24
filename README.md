@@ -3,26 +3,32 @@
 
 ## Introduction
 
-**SSTD** is initially described in our [ICCV 2017 paper](https://arxiv.org/abs/1709.00138).
+**SSTD** is initially described in our [ICCV 2017 spotlight paper](https://arxiv.org/abs/1709.00138).
 
 
-<img src='demo/main.png' width='800'>
+<img src='examples/main.png' width='800'>
 
 
 If you find it useful in your research, please consider citing:
 ```
 @inproceedings{panhe17singleshot,
       Title   = {Single Shot Text Detector with Regional Attention},
-      Author  = {Pan He and Weilin Huang and Tong He and Qile Zhu and Yu Qiao and Xiaolin Li},
-      Note    = {In Proceedings of Internatioanl Conference on Computer Vision (ICCV)},
+      Author  = {He, Pan and Huang, Weilin and He, Tong and Zhu, Qile and Qiao, Yu and Li, Xiaolin},
+      Note    = {Proceedings of Internatioanl Conference on Computer Vision (ICCV)},
       Year    = {2017}
-     }
-@inproceedings{liu2016ssd,
+      }
+@inproceedings{panhe16readText,
+      Title   = {Reading Scene Text in Deep Convolutional Sequences},
+      Author  = {He, Pan and Huang, Weilin and Qiao, Yu and Loy, Chen Change and Tang, Xiaoou},
+      Note    = {Proceedings of AAAI Conference on Artificial Intelligence, (AAAI)},
+      Year    = {2016}
+      }
+@inproceedings{liu16ssd,
       Title   = {{SSD}: Single Shot MultiBox Detector},
       Author  = {Liu, Wei and Anguelov, Dragomir and Erhan, Dumitru and Szegedy, Christian and Reed, Scott and Fu, Cheng-Yang and Berg, Alexander C.},
       Note    = {Proceedings of European Conference on Computer Vision (ECCV)},
       Year    = {2016}
-    }
+      }
 ```
 
 ### Installation
@@ -42,3 +48,15 @@ If you find it useful in your research, please consider citing:
   make test -j8
   # (Optional)
   make runtest -j8
+  # build nms
+  cd examples/text
+  make
+  cd ..
+  ```
+3. Run the demo code. Download Model [google drive](https://docs.google.com/uc?export=download&id=0Bx8FPKhlXE1lOTF1TzIxOGhsblk), [baiduyun](https://pan.baidu.com/s/1c1ML6dM) and put it in `text/model` folder
+  ```Shell
+  cd examples
+  sh text/download.sh
+  mkdir text/result
+  python text/demo_test.py
+  ```
