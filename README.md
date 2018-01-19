@@ -5,6 +5,10 @@
 
 **SSTD** is initially described in our [ICCV 2017 spotlight paper](https://arxiv.org/abs/1709.00138).
 
+[A third-party implementation of SSTD + Focal Loss](https://github.com/HotaekHan/SSTDNet). Thanks, 
+Ho taek Han
+
+
 
 <img src='examples/main.png' width='800'>
 
