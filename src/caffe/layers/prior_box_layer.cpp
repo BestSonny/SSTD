@@ -146,7 +146,7 @@ void PriorBoxLayer<Dtype>::Forward_cpu(const vector<Blob<Dtype>*>& bottom,
       float center_y = (h + offset_) * step_h;
       float box_width, box_height;
       for (int s = 0; s < min_sizes_.size(); ++s) {
-        int min_size_ = min_sizes_[s];
+        float min_size_ = min_sizes_[s];
         // first prior: aspect_ratio = 1, size = min_size
         box_width = box_height = min_size_;
         // xmin
